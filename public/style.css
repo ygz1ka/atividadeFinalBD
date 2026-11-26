@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #153454;
+  background: #f1f5f9;
+}
+header {
+  background: #153454;
+  color: white;
+  padding: 24px max(20px, calc((100% - 1050px) / 2));
+}
+header h1,
+header p {
+  margin: 0 0 6px;
+}
+header p {
+  color: #c5d5e8;
+}
+main {
+  max-width: 1090px;
+  margin: 24px auto;
+  padding: 0 20px;
+}
+form {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+form h2,
+form div:last-child {
+  grid-column: 1/-1;
+  margin: 0;
+}
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+  font-size: 14px;
+}
+input:not([type="hidden"]) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font: inherit;
+}
+input:focus {
+  outline: 2px solid #2563eb;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  margin: 3px;
+}
+button:hover {
+  filter: brightness(0.9);
+}
+#btnCancelar {
+  background: #64748b;
+}
+#btnConsultar {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+  margin-bottom: 12px;
+}
+#mensagem {
+  font-weight: bold;
+  color: #153454;
+  min-height: 20px;
+}
+.tabela {
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+th {
+  background: #e2e8f0;
+  white-space: nowrap;
+}
+td button:last-child {
+  background: #dc2626;
+}
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
